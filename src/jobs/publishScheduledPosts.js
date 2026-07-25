@@ -2,7 +2,7 @@
 const cron = require("node-cron");
 const Post = require("../models/post");
 const logger = require("../utils/logger");
-const { logActivity } = require("../utils/activityLogger"); // apna actual path
+const { logActivity } = require("../utils/activityLogger");
 
 const publishScheduledPosts = async () => {
   const now = new Date();
@@ -32,7 +32,7 @@ const publishScheduledPosts = async () => {
           targetType: "posts",
           targetId: post._id,
           meta: {
-            message: "Aapka post publish ho gaya hai",
+            message: "Your post has been published",
           },
         });
       } catch (logError) {
