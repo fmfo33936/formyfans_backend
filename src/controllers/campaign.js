@@ -92,7 +92,7 @@ const createCampaign = async (req, res) => {
       });
     }
 
-    // koi aur status (declined, canceled waghera)
+    // any other status (declined, canceled, etc.)
     campaign.paymentStatus = "failed";
     await campaign.save();
     return res.status(402).json({
